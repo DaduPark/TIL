@@ -40,7 +40,7 @@
    한 banned_id 당 매칭되는 user_id을 찾아서 Array<String>에 담고 이것을 다시 Array로 담았다=>badUserList 변수
    
    ![불량사용자1](./images/불량사용자1.jpg)
-   ``java
+   ```java
    for(String banned : banned_id) {
 			ArrayList<String> equalId = new ArrayList<>();
 			
@@ -55,7 +55,7 @@
 			badUserList.add(equalId);
 			System.out.println();
 		}
-	``
+	```
    
    아래처럼 담긴다.<br>
    `
