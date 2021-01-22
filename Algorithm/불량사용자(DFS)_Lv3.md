@@ -1,8 +1,8 @@
 ### 불량사용자 (dfs)_Lv3
 
-#####문제 : <https://programmers.co.kr/learn/courses/30/lessons/64064>
+##### 문제 : <https://programmers.co.kr/learn/courses/30/lessons/64064>
 
-#####설명 : 해당 문제는 dfs문제로서 아래와 같이 문제를 풀어나갔다.
+##### 설명 : 해당 문제는 dfs문제로서 아래와 같이 문제를 풀어나갔다.
 
 
 1. 불량사용자를 찾아내는 메소드를 만든다.
@@ -39,7 +39,7 @@
 2. 이중 포문을 사용하여  banned_id을 첫 포문으로 돌고 두번째 포문을 user_id 기준으로 돌아
    한 banned_id 당 매칭되는 user_id을 찾아서 Array<String>에 담고 이것을 다시 Array로 담았다=>badUserList 변수
    
-   ![Alt text](/images/불량사용자1.jpg)
+   ![불량사용자1](./images/불량사용자1.jpg)
    ``java
    for(String banned : banned_id) {
 			ArrayList<String> equalId = new ArrayList<>();
@@ -57,21 +57,21 @@
 		}
 	``
    
-   아래처럼 담긴다.
+   아래처럼 담긴다.<br>
    `
-   [fr*d*] : frodo fradi 
+   [fr*d*] : frodo fradi <br>
    [abc1**] : abc123 
 	`
 
-3.예시로 매칭되는 user 아이디가 아래와 같이 되어있다면 깊이 탐색을 해야하기 때문에 dfs로 풀어야한다는것을 알 수 있다.
-![Alt text](/images/불량사용자2.jpg)
+3.예시로 매칭되는 user 아이디가 아래와 같이 되어있다면 깊이 탐색을 해야하기 때문에 dfs로 풀어야한다는것을 알 수 있다.<br>
+![불량사용자2](./images/불량사용자2.jpg)
 
 4.dfs 다음 깊이로 들어갈때는 문자에 띄어쓰기를 하여 구분을 해주어 이전 경로도 기억할 수 있도록 하였다 
- ex> 3번의 예시를 보면 첫 경로에는 "frodo crodo frodoc" 두번째 경로는 "frodo abc123 frodoc"
+ <br>ex> 3번의 예시를 보면 첫 경로에는 "frodo crodo frodoc" 두번째 경로는 "frodo abc123 frodoc"
    `dfs(strList+" "+str, num+1);`
 
 
-5. 띄어쓰기를 기준으로 담아져있기에 dfs 처음 실행할때는 띄어쓰기 기준으로 spilt하여 경로가 중복되지 않게 해준다
+5. 띄어쓰기를 기준으로 담아져있기에 dfs 처음 실행할때는 띄어쓰기 기준으로 spilt하여 경로가 중복되지 않게 해준다<br>
    `if(!Arrays.asList(strListArr).contains(str))`
    
 6. 스플릿하여 배열에 담은 값을 sort처리하여 
